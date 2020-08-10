@@ -9,11 +9,6 @@ label {
   width: 100%;
 }
 
-input {
+input, button {
   margin-bottom: 1em;
-}
-
-[type="checkbox"] {
-  margin-bottom: 0;
-  margin-right: 0.25em;
 }

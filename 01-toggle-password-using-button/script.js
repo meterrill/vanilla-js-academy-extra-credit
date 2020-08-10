@@ -1,11 +1,13 @@
 // Get inputs from the DOM
 var passwordInput = document.querySelector('#password');
-var passwordCheckbox = document.querySelector('#show-password');
+var passwordButton = document.querySelector('#show-password');
 
 // Listen for click event
-passwordCheckbox.addEventListener('click', function (event) {
-  // If checkbox is checked...
-  if (event.target.checked) {
+passwordButton.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  // If button is pressed
+  if (event.target.getAttribute('aria-pressed') === 'false') {
     // Show password
     passwordInput.type = 'text';
   } else {
