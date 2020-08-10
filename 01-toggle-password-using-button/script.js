@@ -12,10 +12,14 @@ passwordButton.addEventListener('click', function (event) {
     passwordInput.type = 'text';
     // Toggle aria-pressed attribute
     event.target.setAttribute('aria-pressed', true);
+    // Update button text
+    event.target.textContent = 'Hide Password';
   } else {
     // Hide password
     passwordInput.type = 'password';
     // Toggle aria-pressed attribute
     event.target.setAttribute('aria-pressed', false);
+    // Update button text
+    event.target.textContent = 'Show Password';
   }
 });
