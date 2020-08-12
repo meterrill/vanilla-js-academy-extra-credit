@@ -1,14 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 body {
-  margin: 1em auto;
-  max-width: 40em;
+  font-family: 'Inter', sans-serif;
   width: 88%;
+  max-width: 40em;
+  margin: 1em auto;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.125em;
+  margin-bottom: 1.875em;
+}
+
+form > div {
+  max-width: 26em;
+  margin-bottom: 1.875em;
 }
 
 label {
+  font-size: 1.125em;
+  font-weight: 700;
   display: block;
   width: 100%;
+  margin-bottom: .3125em;
 }
 
-input, button {
+input {
+  font-size: 1.125em;
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #718096;
   margin-bottom: 1em;
+}
+
+input:focus, button:focus {
+  outline: 0;
+  box-shadow: 0 0 1px 4px #ecc94b;
+}
+
+button {
+  font-size: 1.125em;
+  padding: .625em 1.25em;
+  border: none;
+  background-color: #718096;
+  color: #e2e8f0;
+}
+
+button:hover {
+  color: #f7fafc;
+}
+
+.btn-primary {
+  background-color: #38a169;
+  color: #f7fafc;
+}
+
+.btn-primary:hover {
+  background-color: #246844;
 }
