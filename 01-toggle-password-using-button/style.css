@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   width: 88%;
@@ -31,10 +39,10 @@ label {
 
 input {
   font-size: 1.125em;
+  line-height: 1.38889;
   width: 100%;
   padding: 8px;
   border: 2px solid #718096;
-  margin-bottom: 1em;
 }
 
 input:focus, button:focus {
@@ -42,23 +50,33 @@ input:focus, button:focus {
   box-shadow: 0 0 1px 4px #ecc94b;
 }
 
-button {
-  font-size: 1.125em;
-  padding: .625em 1.25em;
-  border: none;
-  background-color: #718096;
-  color: #e2e8f0;
+.input-password > div {
+  display: flex;
 }
 
-button:hover {
-  color: #f7fafc;
+button {
+  font-size: 1.125em;
+  line-height: 1.38889;
+  border: none;
 }
 
 .btn-primary {
+  padding: 8.5px 20px;
   background-color: #38a169;
   color: #f7fafc;
 }
 
 .btn-primary:hover {
   background-color: #246844;
+}
+
+.btn-secondary {
+  align-self: stretch;
+  min-width: 80px;
+  background-color: #718096;
+  color: #e2e8f0;
+}
+
+.btn-secondary:hover {
+  color: #f7fafc;
 }

@@ -13,13 +13,13 @@ passwordButton.addEventListener('click', function (event) {
     // Toggle aria-pressed attribute
     event.target.setAttribute('aria-pressed', true);
     // Update button text
-    event.target.textContent = 'Hide Password';
+    event.target.textContent = 'Hide';
   } else {
     // Hide password
     passwordInput.type = 'password';
     // Toggle aria-pressed attribute
     event.target.setAttribute('aria-pressed', false);
     // Update button text
-    event.target.textContent = 'Show Password';
+    event.target.textContent = 'Show';
   }
 });

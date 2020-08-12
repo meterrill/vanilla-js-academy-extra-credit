@@ -12,19 +12,18 @@
   <p>Enter your username and password to login.</p>
 
   <form>
-    <div>
+    <div class="input-username">
       <label for="username">Username</label>
       <input type="text" name="username" id="username">
     </div>
 
-    <div>
+    <div class="input-password">
       <label for="password">Password</label>
-      <input type="password" name="password" id="password">
+      <div>
+        <input type="password" name="password" id="password">
+        <button id="show-password" class="btn-secondary" aria-label="Show Password" aria-pressed="false">Show</button>
+      </div>
     </div>
-
-    <p>
-      <button id="show-password" aria-label="Show Password" aria-pressed="false">Show Password</button>
-    </p>
 
     <p>
       <button type="submit" class="btn-primary">Log In</button>
