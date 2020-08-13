@@ -6,7 +6,6 @@ var passwordButton = document.querySelector('#show-password');
 passwordButton.addEventListener('click', function (event) {
   event.preventDefault();
 
-  // If button is pressed
   if (event.target.getAttribute('aria-pressed') === 'false') {
     // Show password
     passwordInput.type = 'text';
@@ -14,7 +13,11 @@ passwordButton.addEventListener('click', function (event) {
     event.target.setAttribute('aria-pressed', true);
     // Update button text
     event.target.textContent = 'Hide';
-  } else {
+    // End function
+    return;
+  }
+
+  if (event.target.getAttribute('aria-pressed') === 'true') {
     // Hide password
     passwordInput.type = 'password';
     // Toggle aria-pressed attribute
