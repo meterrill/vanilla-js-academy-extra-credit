@@ -1,7 +1,8 @@
-// Get textarea and span elements
+// Get textarea, span elements, and #word-list div
 var text = document.querySelector('#text');
 var wordCount = document.querySelector('#word-count');
 var characterCount = document.querySelector('#character-count');
+var wordList = document.querySelector('#word-list');
 
 // Listen for input on the textarea
 text.addEventListener('input', function() {
@@ -38,4 +39,9 @@ text.addEventListener('input', function() {
 
   // Get the length of the value in the textarea and update the DOM
   characterCount.textContent = text.value.length;
+
+  // Add the sorted words list to the DOM
+  wordList.innerHTML = sortedWords.map(function(word) {
+    return `<li>${word.word}: ${word.total}</li>`;
+  }).join('');
 });
