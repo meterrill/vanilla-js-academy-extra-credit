@@ -23,6 +23,16 @@ text.addEventListener('input', function() {
     }
   });
 
+  // Sort the words in descending order
+  var sortedWords = Object.keys(wordsMap).map(function(word) {
+    return {
+      word: word,
+      total: wordsMap[word]
+    };
+  }).sort(function(a, b) {
+    return b.total - a.total;
+  });
+
   // Update the word count in the DOM
   wordCount.textContent = words.length;
 
