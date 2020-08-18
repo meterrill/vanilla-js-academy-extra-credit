@@ -53,11 +53,20 @@ p:last-of-type {
 ul {
   list-style: none;
   padding-left: 0;
-  margin: 0;
+  margin-bottom: 3.75em;
 }
 
 li {
   padding: 5px 10px;
+}
+
+li > span {
+  display: inline-block;
+  width: 50%;
+}
+
+li > span + span {
+  width: auto;
 }
 
 li:nth-child(odd) {

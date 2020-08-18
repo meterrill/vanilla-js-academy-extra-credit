@@ -93,6 +93,6 @@ text.addEventListener('input', function() {
 
   // Add the words list to the DOM
   wordList.innerHTML = sortedWords.map(function(word) {
-    return `<li>${word.word}: ${word.count}</li>`;
+    return `<li><span>${word.word}:</span> <span>${word.count}</span></li>`;
   }).join('');
 });
