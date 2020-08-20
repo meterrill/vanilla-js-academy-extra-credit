@@ -33,9 +33,27 @@ form > div {
 label {
   font-size: 1.125em;
   font-weight: 700;
+  line-height: 1.38889;
   display: block;
   width: 100%;
   margin-bottom: .3125em;
+}
+
+.field-label {
+  display: block;
+}
+
+.field-error {
+  display: none;
+  margin-bottom: 10px;
+  color: #e53e3e;
+}
+
+.field-error svg {
+  fill: #e53e3e;
+  width: 1.5625em;
+  margin: 5px 5px 0 0;
+  vertical-align: text-bottom;
 }
 
 input {

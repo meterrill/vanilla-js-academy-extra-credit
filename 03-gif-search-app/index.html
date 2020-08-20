@@ -11,7 +11,12 @@
 
   <form>
     <div class="input-search">
-      <label for="search">Search GIFs</label>
+      <label for="search">
+        <span class="field-label">Search GIFs</span>
+        <span class="field-error"><svg width="1.3em" height="1.3em" id="error-icon" viewBox="0 0 24 24">
+          <path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+        </svg>Enter a search query term or phrase</span>
+      </label>
       <input type="text" name="search" id="search">
     </div>
 
