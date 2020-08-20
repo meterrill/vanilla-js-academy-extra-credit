@@ -16,8 +16,15 @@ body {
   color: #2d3748;
 }
 
+header {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 h1 {
   font-size: 3em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 p {
