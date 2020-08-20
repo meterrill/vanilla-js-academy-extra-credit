@@ -8,6 +8,21 @@ var searchResults = document.querySelector('#results');
 var apiKey = '6PMeaEBxQZUYtzenqPxie3dt4XyehQh3';
 var endpoint = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=`
 
+/**
+ * Get the data from the API
+ * @param   {String} searchQuery The search query term or phrase
+ * @returns {Object}             The API data
+ */
+function getGIFs(searchQuery) {
+  fetch(endpoint + searchQuery).then(function(response) {
+    return response.ok ? response.json() : Promise.reject(response);
+  }).then(function(data) {
+    console.log(data);
+  }).catch(function(error) {
+    console.log(error);
+  });
+}
+
 // Listen for a click on the button
 searchButton.addEventListener('click', function() {
   event.preventDefault();
@@ -15,7 +30,7 @@ searchButton.addEventListener('click', function() {
   var searchQuery = searchInput.value;
   
   if (searchQuery.length > 0) {
-    console.log(searchQuery);
+    getGIFs(searchQuery);
     fieldError.style.display = "none";
   } else {
     fieldError.style.display = "block";
