@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 1em auto;
-  max-width: 1200px;
+  font-family: 'Inter', sans-serif;
   width: 90%;
+  max-width: 75em;
+  margin: 1em auto;
+  color: #2d3748;
 }
 
 img {
@@ -14,6 +23,32 @@ img {
 h1 {
   font-size: 3em;
   text-align: center;
+}
+
+.field {
+  max-width: 26em;
+  margin: 0 auto 30px;
+}
+
+.field-label {
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1.38889;
+  display: block;
+  margin-bottom: 5px;
+  color: #2d3748;
+}
+
+select {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125em;
+  line-height: 1.38889;
+  width: 100%;
+}
+
+select:focus {
+  outline: 0;
+  box-shadow: 0 0 1px 4px #ecc94b;
 }
 
 h2 {
@@ -26,24 +61,24 @@ h2 {
 
 h2 > a {
   display: block;
-  background-color: #999;
-  color: #fff;
+  background-color: #718096;
+  color: #f7fafc;
   transition: background-color .2s ease-in-out;
 }
 
 h2 > a:hover {
-  background-color: #000;
+  background-color: #4f5b6b;
 }
 
 h3 {
   font-size: 1.5em;
   line-height: 1.25;
-  color: #000;
+  color: #2d3748;
 }
 
-section+section {
+section + section {
   padding-top: 2.5em;
-  border-top: 1px solid #999;
+  border-top: 1px solid #718096;
   margin-top: 2.5em;
 }
 
@@ -53,18 +88,18 @@ a {
 
 p {
   font-family: 'Roboto', sans-serif;
-  color: #333;
+  color: #2d3748;
 }
 
 time {
   font-size: .875em;
-  color: #999;
+  color: #4f5b6b;
 }
 
 @media (max-width: 599px) {
-  article+article {
+  article + article {
     padding-top: 2.5em;
-    border-top: 1px solid #999;
+    border-top: 1px solid #718096;
     margin-top: 2.5em;
   }
 }
@@ -90,7 +125,7 @@ time {
 
   article:nth-child(n+4) {
     padding-top: 2.5em;
-    border-top: 1px solid #999;
+    border-top: 1px solid #718096;
     margin-top: 2.5em;
   }
 }
