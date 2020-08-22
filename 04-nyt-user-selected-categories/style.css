@@ -27,7 +27,7 @@ h1 {
 
 .field {
   max-width: 26em;
-  margin: 0 auto 30px;
+  margin: 0 auto 3em;
 }
 
 .field-label {
@@ -53,33 +53,14 @@ select:focus {
 
 h2 {
   font-size: 1.25em;
-  line-height: 1.5;
-  text-align: center;
   text-transform: uppercase;
-  margin: 0 0 1.5em;
-}
-
-h2 > a {
-  display: block;
-  background-color: #718096;
-  color: #f7fafc;
-  transition: background-color .2s ease-in-out;
-}
-
-h2 > a:hover {
-  background-color: #4f5b6b;
+  margin: 0 0 .5em;
 }
 
 h3 {
   font-size: 1.5em;
   line-height: 1.25;
   color: #2d3748;
-}
-
-section + section {
-  padding-top: 2.5em;
-  border-top: 1px solid #718096;
-  margin-top: 2.5em;
 }
 
 a {
@@ -89,6 +70,10 @@ a {
 p {
   font-family: 'Roboto', sans-serif;
   color: #2d3748;
+}
+
+p.error {
+  text-align: center;
 }
 
 time {
@@ -105,7 +90,7 @@ time {
 }
 
 @media (min-width: 600px) {
-  #app > section > div {
+  #app {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 30px;
@@ -113,13 +98,15 @@ time {
 }
 
 @media (min-width: 600px) and (max-width: 899px) {
-  article:last-child {
-    display: none;
+  article:nth-child(n+3) {
+    padding-top: 2.5em;
+    border-top: 1px solid #718096;
+    margin-top: 2.5em;
   }
 }
 
 @media (min-width: 900px) {
-  #app > section > div {
+  #app {
     grid-template-columns: repeat(3, 1fr);
   }
 
