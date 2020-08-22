@@ -20,9 +20,16 @@ img {
   max-width: 100%;
 }
 
+header {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 h1 {
   font-size: 3em;
-  text-align: center;
+  margin-top: 0;
+  margin-bottom: .5rem;
 }
 
 .field {
@@ -74,11 +81,27 @@ p {
 
 p.error {
   text-align: center;
+  margin-bottom: 0;
 }
 
 time {
   font-size: .875em;
   color: #4f5b6b;
+}
+
+footer {
+  padding-top: 2.5em;
+}
+
+footer p {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 1.125em;
+}
+
+footer a, footer a:visited {
+  text-decoration: underline;
+  color: #4a5568;
 }
 
 @media (max-width: 599px) {
