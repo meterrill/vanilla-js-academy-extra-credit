@@ -4,10 +4,8 @@ var sectionSelect = document.querySelector('#section');
 // Get the #app element
 var app = document.querySelector('#app');
 
-// Store the endpoint and API key
-var section = 'home';
+// Store the API key
 var apiKey = '0q2Pwnu4SiIy7UxplCJ745E0PGRohgVb';
-var endpoint = 'https://api.nytimes.com/svc/topstories/v2/' + section + '.json?api-key=' + apiKey;
 
 /**
  * Get the JSON from the API
@@ -47,14 +45,20 @@ function displayError(error) {
   app.innerHTML = '<p class="error">We\'re experiencing some technical difficulties.<br>Please try again later or view today\'s top stories directly on <a href="https://www.nytimes.com/">The New York Times</a> website.</p>';
 }
 
-fetch(endpoint)
-  .then(getJSON)
-  .then(displayArticles)
-  .catch(displayError);
+/**
+ * Get articles from the NYT Top Stories API
+ */
+function getArticles() {
+  var section = sectionSelect.value;
+  var endpoint = 'https://api.nytimes.com/svc/topstories/v2/' + section + '.json?api-key=' + apiKey;
 
+  fetch(endpoint)
+    .then(getJSON)
+    .then(displayArticles)
+    .catch(displayError);
+}
+
+getArticles();
 
 // Listen for changes to the section select element
-sectionSelect.addEventListener('change', function(){
-  console.log(sectionSelect.value);
-});
-  
+sectionSelect.addEventListener('change', getArticles);
