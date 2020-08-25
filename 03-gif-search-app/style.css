@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+html, body {
+  height: 100%;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -10,24 +14,33 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  width: 88%;
-  max-width: 40em;
-  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   color: #2d3748;
 }
 
 header {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  width: 88%;
+  max-width: 40em;
+  margin: 2em auto;
 }
+
+main {
+  flex: 1 0 auto;
+  width: 88%;
+  max-width: 40em;
+  margin: 0 auto;
+}  
 
 h1 {
   font-size: 3em;
+  line-height: 1;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-p {
+main p {
   font-size: 1.125em;
   margin-bottom: 1.875em;
 }
@@ -115,10 +128,25 @@ button {
   height: auto;
 }
 
-footer p {
-  font-size: 1em;
+footer {
   text-align: center;
-  margin-bottom: 1.125em;
+  flex-shrink: 0;
+  background-color: #edf2f7;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 88%;
+  max-width: 40em;
+  padding: 1.875em 0;
+  border-bottom: 2px solid #2d3748;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 1.875em auto;
 }
 
 footer a, footer a:visited {

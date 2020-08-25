@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NYT Top Stories</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,46 +13,55 @@
     <img src="img/poweredby_nytimes_150a.png" alt="Data provided by The New York Times">
   </header>
 
-  <div class="field">
-    <label class="field-label" for="section">Select a section</label>
-    <select class field-select id="section" name="section">
-        <option value="home">Home</option>
-        <option value="arts">Arts</option>
-        <option value="automobiles">Automobiles</option>
-        <option value="books">Books</option>
-        <option value="business">Business</option>
-        <option value="fashion">Fashion</option>
-        <option value="food">Food</option>
-        <option value="health">Health</option>
-        <option value="insider">Insider</option>
-        <option value="magazine">Magazine</option>
-        <option value="movies">Movies</option>
-        <option value="nyregion">NY Region</option>
-        <option value="obituaries">Obituaries</option>
-        <option value="opinion">Opinion</option>
-        <option value="politics">Politics</option>
-        <option value="realestate">Real Estate</option>
-        <option value="science">Science</option>
-        <option value="sports">Sports</option>
-        <option value="sundayreview">Sunday Review</option>
-        <option value="technology">Technology</option>
-        <option value="theater">Theater</option>
-        <option value="t-magazine">T Magazine</option>
-        <option value="travel">Travel</option>
-        <option value="upshot">Upshot</option>
-        <option value="us">US</option>
-        <option value="world">World</option>
-    </select>
-  </div>
-
-  <div id="app"></div>
+  <main>
+    <div class="field">
+      <label class="field-label" for="section">Select a section</label>
+      <select class field-select id="section" name="section">
+          <option value="home">Home</option>
+          <option value="arts">Arts</option>
+          <option value="automobiles">Automobiles</option>
+          <option value="books">Books</option>
+          <option value="business">Business</option>
+          <option value="fashion">Fashion</option>
+          <option value="food">Food</option>
+          <option value="health">Health</option>
+          <option value="insider">Insider</option>
+          <option value="magazine">Magazine</option>
+          <option value="movies">Movies</option>
+          <option value="nyregion">NY Region</option>
+          <option value="obituaries">Obituaries</option>
+          <option value="opinion">Opinion</option>
+          <option value="politics">Politics</option>
+          <option value="realestate">Real Estate</option>
+          <option value="science">Science</option>
+          <option value="sports">Sports</option>
+          <option value="sundayreview">Sunday Review</option>
+          <option value="technology">Technology</option>
+          <option value="theater">Theater</option>
+          <option value="t-magazine">T Magazine</option>
+          <option value="travel">Travel</option>
+          <option value="upshot">Upshot</option>
+          <option value="us">US</option>
+          <option value="world">World</option>
+      </select>
+    </div>
+  
+    <div id="app"></div>
+  </main>
 
   <footer>
-    <hr>
-    <p>
-      <span>Form design adopted from <a href="https://adamsilver.io/">Adam Silver</a>'s</span> 
-      <span><a href="http://nostyle.herokuapp.com/">No Style Design System</a>.</span>
-    </p>
+    <nav>
+      <ul>
+        <li>
+          <a href="/"><span class="fas fa-chevron-left"></span> Back to Projects</a>
+        </li>
+        <li>
+          <a href="https://github.com/meterrill/vanilla-js-academy-extra-credit/tree/master/04-nyt-user-selected-categories"><span class="fab fa-github"></span> View on GitHub</a>
+        </li>
+      </ul>
+    </nav>
+
+    <p>Form design adopted from <a href="https://adamsilver.io/">Adam Silver</a>'s <a href="http://nostyle.herokuapp.com/">No Style Design System</a>.</p>
   </footer>
 
   <script src="script.js"></script>

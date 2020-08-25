@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+html, body {
+  height: 100%;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -10,17 +14,25 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #2d3748;
+}
+
+main {
+  flex: 1 0 auto;
   width: 88%;
   max-width: 40em;
-  margin: 1em auto;
-  color: #2d3748;
+  margin: 0 auto;
 }
 
 h1 {
   font-size: 3em;
+  line-height: 1;
 }
 
-p {
+main p {
   font-size: 1.125em;
   margin-bottom: 1.875em;
 }
@@ -59,12 +71,12 @@ button {
   font-size: 1.125em;
   line-height: 1.38889;
   border: none;
+  color: #f7fafc;
 }
 
 .btn-primary {
   padding: 8.5px 20px;
   background-color: #38a169;
-  color: #f7fafc;
 }
 
 .btn-primary:hover {
@@ -75,17 +87,31 @@ button {
   align-self: stretch;
   min-width: 80px;
   background-color: #718096;
-  color: #e2e8f0;
 }
 
 .btn-secondary:hover {
-  color: #f7fafc;
+  background-color: #4f5b6b;
+}
+
+footer {
+  text-align: center;
+  flex-shrink: 0;
+  background-color: #edf2f7;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 88%;
+  max-width: 40em;
+  padding: 1.875em 0;
+  border-bottom: 2px solid #2d3748;
+  margin: 0 auto;
 }
 
 footer p {
-  font-size: 1em;
-  text-align: center;
-  margin-bottom: 1.125em;
+  margin: 1.875em auto;
 }
 
 footer a, footer a:visited {

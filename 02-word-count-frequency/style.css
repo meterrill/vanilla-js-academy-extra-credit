@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+html, body {
+  height: 100%;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -10,14 +14,22 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #2d3748;
+}
+
+main {
+  flex: 1 0 auto;
   width: 88%;
   max-width: 40em;
-  margin: 1em auto;
-  color: #2d3748;
+  margin: 0 auto;
 }
 
 h1 {
   font-size: 3em;
+  line-height: 1;
 }
 
 label {
@@ -43,11 +55,11 @@ textarea:focus {
   box-shadow: 0 0 1px 4px #ecc94b;
 }
 
-p {
+main p {
   font-size: 1.125em;
 }
 
-p:last-of-type {
+main p:last-of-type {
   margin-bottom: .3125em;
 }
 
@@ -57,27 +69,42 @@ ul {
   margin-bottom: 3.75em;
 }
 
-li {
+main li {
   padding: 5px 10px;
 }
 
-li > span {
+main li > span {
   display: inline-block;
   width: 50%;
 }
 
-li > span + span {
+main li > span + span {
   width: auto;
 }
 
-li:nth-child(odd) {
-  background-color: #e2e8f0;
+main li:nth-child(odd) {
+  background-color: #edf2f7;
+}
+
+footer {
+  text-align: center;
+  flex-shrink: 0;
+  background-color: #edf2f7;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 88%;
+  max-width: 40em;
+  padding: 1.875em 0;
+  border-bottom: 2px solid #2d3748;
+  margin: 0 auto;
 }
 
 footer p {
-  font-size: 1em;
-  text-align: center;
-  margin-bottom: 1.125em;
+  margin: 1.875em auto;
 }
 
 footer a, footer a:visited {

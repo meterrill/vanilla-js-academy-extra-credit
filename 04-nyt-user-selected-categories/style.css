@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+html, body {
+  height: 100%;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -10,9 +14,9 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  width: 90%;
-  max-width: 75em;
-  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   color: #2d3748;
 }
 
@@ -24,6 +28,13 @@ header {
   text-align: center;
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 90%;
+  max-width: 75em;
+  margin: 1em auto;
 }
 
 h1 {
@@ -71,16 +82,16 @@ h3 {
   color: #2d3748;
 }
 
-a {
+main a {
   text-decoration: none;
 }
 
-p {
+main p {
   font-family: 'Roboto', sans-serif;
   color: #2d3748;
 }
 
-p.error {
+main p.error {
   text-align: center;
   margin-bottom: 0;
 }
@@ -91,17 +102,28 @@ time {
 }
 
 footer {
-  padding-top: 2.5em;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 1.875em;
+  background-color: #edf2f7;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 88%;
+  max-width: 40em;
+  padding: 1.875em 0;
+  border-bottom: 2px solid #2d3748;
+  margin: 0 auto;
 }
 
 footer p {
-  font-size: 1em;
-  text-align: center;
-  margin-bottom: 1.125em;
+  margin: 1.875em auto;
 }
 
 footer a, footer a:visited {
-  text-decoration: underline;
   color: #4a5568;
 }
 
